@@ -16,7 +16,7 @@ export default class Laylo2 extends React.Component {
 
  imgClick = () => {
     Alert.alert(
-  'Row 1 Base D20 roll \n\n Row 2 D20 + 14|14|9 \n\n Row 3 Dagger \n\n Row 4 \n Sneak Attack 4d8 Total \n\n Row 5 = Rows 3 & 4 + 7 = Total Damage',
+  'Row 1 Base D20 roll \n\n Row 2 D20 + 19|19|14 \n\n Row 3 Dagger \n\n Row 4 \n Sneak Attack 4d8 Total \n\n Row 5 = Rows 3 & 4 + 10 = Total Damage',
   'Enjoy!',
   [
     {text: 'T20 = Total D20 Roll Fighting Defensively', onPress: () => console.log('D20 Roll Total')},
@@ -51,9 +51,9 @@ export default class Laylo2 extends React.Component {
     let D20S1 = Math.floor(Math.random() * 20) + 1 ;
     let D20S2 = Math.floor(Math.random() * 20) + 1 ;
     let D20S3 = Math.floor(Math.random() * 20) + 1 ;
-    let D20TotalS1 = D20S1 + 14 ;
-    let D20TotalS2 = D20S2 + 14 ;
-    let D20TotalS3 = D20S3 + 9;
+    let D20TotalS1 = D20S1 + 19 ;
+    let D20TotalS2 = D20S2 + 19 ;
+    let D20TotalS3 = D20S3 + 14 ;
     let diceroll8S1a = Math.floor(Math.random()  * 8) +1;
     let diceroll8S1b = Math.floor(Math.random()  * 8) +1;
     let diceroll8S1c = Math.floor(Math.random()  * 8) +1;
@@ -72,9 +72,9 @@ export default class Laylo2 extends React.Component {
     let D4S1 = Math.floor(Math.random() * 4) + 1 ;
     let D4S2 = Math.floor(Math.random() * 4) + 1 ;
     let D4S3 = Math.floor(Math.random() * 4) + 1 ;
-    let TotalS1 = D8S1 + D4S1 + 7;
-    let TotalS2 = D8S2 + D4S2 + 7;
-    let TotalS3 = D8S3 + D4S3 + 7;
+    let TotalS1 = D8S1 + D4S1 + 10;
+    let TotalS2 = D8S2 + D4S2 + 10;
+    let TotalS3 = D8S3 + D4S3 + 10;
 
   this.setState({
 
@@ -109,7 +109,7 @@ export default class Laylo2 extends React.Component {
             <TouchableOpacity onPress={imgClick} style={styles.profileimage}>
               <Image
                 style={styles.image}
-                source={require('../images/Laylo2.jpeg')}
+                source={require('../images/Laylo5.jpg')}
               />
             </TouchableOpacity>
 
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
     bottomItemInner20picked: {
       flex: 1,
       backgroundColor: 'red',
-      borderColor: '#444054',
+      borderColor: '#FFD400',
       borderWidth: 2,
       justifyContent: 'center',
       alignItems: 'center',
@@ -220,14 +220,14 @@ const styles = StyleSheet.create({
     },
     container: {
       flex: 1,
-      backgroundColor: '#00FDDC',
+      backgroundColor: '#820263',
       padding: 5,
     },
     top: {
       height: '35%',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#00FDDC',
+      backgroundColor: '#820263',
     },
     profileimage: {
       width: 140,
@@ -241,12 +241,12 @@ const styles = StyleSheet.create({
     },
     image: {
       flex: 1,
-      maxHeight: '84%',
+      maxHeight: '85%',
       maxWidth: '65%',
     },
     center: {
       height: '10%',
-      backgroundColor: '#00FDDC',
+      backgroundColor: '#820263',
       justifyContent: 'center',
       alignContent: 'center',
       alignItems: 'center',
@@ -254,7 +254,7 @@ const styles = StyleSheet.create({
     },
     bottom: {
       height: '33%',
-      backgroundColor: '#00FDDC',
+      backgroundColor: '#820263',
       flexDirection: 'row',
       flexWrap: 'wrap',
       padding: 2,
@@ -272,7 +272,7 @@ const styles = StyleSheet.create({
     bottomItemInner20: {
       flex: 1,
       backgroundColor: 'white',
-      borderColor: '#444054',
+      borderColor: '#FFD400',
       borderWidth: 2,
       justifyContent: 'center',
       alignItems: 'center',
@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
     bottomItemInner8: {
       flex: 1,
       backgroundColor: 'white',
-      borderColor: '#444054',
+      borderColor: '#FFD400',
       borderWidth: 2,
       justifyContent: 'center',
       alignItems: 'center',
@@ -296,7 +296,7 @@ const styles = StyleSheet.create({
     bottomItemInner4: {
       flex: 1,
       backgroundColor: 'white',
-      borderColor: '#444054',
+      borderColor: '#FFD400',
       borderWidth: 2,
       justifyContent: 'center',
       alignItems: 'center',

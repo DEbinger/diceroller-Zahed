@@ -10,13 +10,13 @@ import {
 import { Button } from './Button';
 import * as Animatable from 'react-native-animatable';
 
-export default class Laylo2 extends React.Component {
+export default class Laylo4 extends React.Component {
   constructor(props) {
     super(props);
 
  imgClick = () => {
     Alert.alert(
-  'Row 1 Base D20 roll \n\n Row 2 D20 + 14|14|9 \n\n Row 3 Dagger \n\n Row 4 \n Sneak Attack 4d8 Total \n\n Row 5 = Rows 3 & 4 + 7 = Total Damage',
+  'Row 1 Base D20 roll \n\n Row 2 D20 + 17|17|12 \n\n Row 3 Dagger \n\n Row 4 \n Sneak Attack 4d8 Total \n\n Row 5 = Rows 3 & 4 + 10 = Total Damage',
   'Enjoy!',
   [
     {text: 'T20 = Total D20 Roll Fighting Defensively', onPress: () => console.log('D20 Roll Total')},
@@ -48,12 +48,12 @@ export default class Laylo2 extends React.Component {
   }
 
   handleButtonPress=()=> {
-    let D20S1 = Math.floor(Math.random() * 20) + 1 ;
-    let D20S2 = Math.floor(Math.random() * 20) + 1 ;
-    let D20S3 = Math.floor(Math.random() * 20) + 1 ;
-    let D20TotalS1 = D20S1 + 14 ;
-    let D20TotalS2 = D20S2 + 14 ;
-    let D20TotalS3 = D20S3 + 9;
+    let D20S1 = Math.floor(Math.random() * 20) + 1;
+    let D20S2 = Math.floor(Math.random() * 20) + 1;
+    let D20S3 = Math.floor(Math.random() * 20) + 1;
+    let D20TotalS1 = D20S1 + 17;
+    let D20TotalS2 = D20S2 + 17;
+    let D20TotalS3 = D20S3 + 12;
     let diceroll8S1a = Math.floor(Math.random()  * 8) +1;
     let diceroll8S1b = Math.floor(Math.random()  * 8) +1;
     let diceroll8S1c = Math.floor(Math.random()  * 8) +1;
@@ -69,12 +69,12 @@ export default class Laylo2 extends React.Component {
     let diceroll8S3c = Math.floor(Math.random()  * 8) +1;
     let diceroll8S3d = Math.floor(Math.random()  * 8) +1;
     let D8S3 = diceroll8S3a + diceroll8S3b + diceroll8S3c + diceroll8S3d;
-    let D4S1 = Math.floor(Math.random() * 4) + 1 ;
-    let D4S2 = Math.floor(Math.random() * 4) + 1 ;
-    let D4S3 = Math.floor(Math.random() * 4) + 1 ;
-    let TotalS1 = D8S1 + D4S1 + 7;
-    let TotalS2 = D8S2 + D4S2 + 7;
-    let TotalS3 = D8S3 + D4S3 + 7;
+    let D4S1 = Math.floor(Math.random() * 4) + 1;
+    let D4S2 = Math.floor(Math.random() * 4) + 1;
+    let D4S3 = Math.floor(Math.random() * 4) + 1;
+    let TotalS1 = D8S1 + D4S1 + 10;
+    let TotalS2 = D8S2 + D4S2 + 10;
+    let TotalS3 = D8S3 + D4S3 + 10;
 
   this.setState({
 
@@ -109,7 +109,7 @@ export default class Laylo2 extends React.Component {
             <TouchableOpacity onPress={imgClick} style={styles.profileimage}>
               <Image
                 style={styles.image}
-                source={require('../images/Laylo2.jpeg')}
+                source={require('../images/Laylo4.jpg')}
               />
             </TouchableOpacity>
 
@@ -206,28 +206,16 @@ export default class Laylo2 extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    bottomItemInner20picked: {
-      flex: 1,
-      backgroundColor: 'red',
-      borderColor: '#444054',
-      borderWidth: 2,
-      justifyContent: 'center',
-      alignItems: 'center',
-      textAlign: 'center',
-      fontSize: 60,
-      fontWeight: '900',
-      color: 'white',
-    },
     container: {
       flex: 1,
-      backgroundColor: '#00FDDC',
+      backgroundColor: '#FFD400',
       padding: 5,
     },
     top: {
       height: '35%',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#00FDDC',
+      backgroundColor: '#FFD400',
     },
     profileimage: {
       width: 140,
@@ -246,7 +234,7 @@ const styles = StyleSheet.create({
     },
     center: {
       height: '10%',
-      backgroundColor: '#00FDDC',
+      backgroundColor: '#FFD400',
       justifyContent: 'center',
       alignContent: 'center',
       alignItems: 'center',
@@ -254,7 +242,7 @@ const styles = StyleSheet.create({
     },
     bottom: {
       height: '33%',
-      backgroundColor: '#00FDDC',
+      backgroundColor: '#FFD400',
       flexDirection: 'row',
       flexWrap: 'wrap',
       padding: 2,
@@ -280,6 +268,18 @@ const styles = StyleSheet.create({
       fontSize: 60,
       fontWeight: '900',
       color: '#d2691e',
+    },
+    bottomItemInner20picked: {
+      flex: 1,
+      backgroundColor: 'red',
+      borderColor: '#444054',
+      borderWidth: 2,
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center',
+      fontSize: 60,
+      fontWeight: '900',
+      color: 'white',
     },
     bottomItemInner8: {
       flex: 1,

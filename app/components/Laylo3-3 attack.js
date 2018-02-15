@@ -10,13 +10,13 @@ import {
 import { Button } from './Button';
 import * as Animatable from 'react-native-animatable';
 
-export default class Laylo2 extends React.Component {
+export default class Laylo3 extends React.Component {
   constructor(props) {
     super(props);
 
  imgClick = () => {
     Alert.alert(
-  'Row 1 Base D20 roll \n\n Row 2 D20 + 14|14|9 \n\n Row 3 Dagger \n\n Row 4 \n Sneak Attack 4d8 Total \n\n Row 5 = Rows 3 & 4 + 7 = Total Damage',
+  'Row 1 Base D20 roll \n\n Row 2 D20 + 13|13|8 \n\n Row 3 Dagger \n\n Row 4 \n Sneak Attack 4d8 Total \n\n Row 5 = Rows 3 & 4 + 10 = Total Damage',
   'Enjoy!',
   [
     {text: 'T20 = Total D20 Roll Fighting Defensively', onPress: () => console.log('D20 Roll Total')},
@@ -51,9 +51,9 @@ export default class Laylo2 extends React.Component {
     let D20S1 = Math.floor(Math.random() * 20) + 1 ;
     let D20S2 = Math.floor(Math.random() * 20) + 1 ;
     let D20S3 = Math.floor(Math.random() * 20) + 1 ;
-    let D20TotalS1 = D20S1 + 14 ;
-    let D20TotalS2 = D20S2 + 14 ;
-    let D20TotalS3 = D20S3 + 9;
+    let D20TotalS1 = D20S1 + 13 ;
+    let D20TotalS2 = D20S2 + 13 ;
+    let D20TotalS3 = D20S3 + 8 ;
     let diceroll8S1a = Math.floor(Math.random()  * 8) +1;
     let diceroll8S1b = Math.floor(Math.random()  * 8) +1;
     let diceroll8S1c = Math.floor(Math.random()  * 8) +1;
@@ -72,9 +72,9 @@ export default class Laylo2 extends React.Component {
     let D4S1 = Math.floor(Math.random() * 4) + 1 ;
     let D4S2 = Math.floor(Math.random() * 4) + 1 ;
     let D4S3 = Math.floor(Math.random() * 4) + 1 ;
-    let TotalS1 = D8S1 + D4S1 + 7;
-    let TotalS2 = D8S2 + D4S2 + 7;
-    let TotalS3 = D8S3 + D4S3 + 7;
+    let TotalS1 = D8S1 + D4S1 + 10;
+    let TotalS2 = D8S2 + D4S2 + 10;
+    let TotalS3 = D8S3 + D4S3 + 10;
 
   this.setState({
 
@@ -109,7 +109,7 @@ export default class Laylo2 extends React.Component {
             <TouchableOpacity onPress={imgClick} style={styles.profileimage}>
               <Image
                 style={styles.image}
-                source={require('../images/Laylo2.jpeg')}
+                source={require('../images/Laylo3.jpg')}
               />
             </TouchableOpacity>
 
