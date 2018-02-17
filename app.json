@@ -1,5 +1,12 @@
 {
   "expo": {
-    "sdkVersion": "25.0.0"
+    "name": "Dice Roller Laylo",
+    "icon": "./logo.png",
+    "description": "A dice rolling app for Laylo the Blade.",
+    "sdkVersion": "25.0.0",
+    "version": "1.0.0",
+    "ios": {
+      "bundleIdentifier": "com.davidebinger.dicerollerlaylo"
+    }
   }
 }
