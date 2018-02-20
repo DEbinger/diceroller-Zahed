@@ -5,21 +5,25 @@ import {
   View,
   Image,
   Alert,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions,
        } from 'react-native';
 import { Button } from './Button';
 import * as Animatable from 'react-native-animatable';
 
 export default class Laylo4 extends React.Component {
+  static navigationOptions = {
+    title: '17|17|12 +10',
+  };
   constructor(props) {
     super(props);
 
  imgClick = () => {
     Alert.alert(
-  'Row 1 Base D20 roll \n\n Row 2 D20 + 17|17|12 \n\n Row 3 Dagger \n\n Row 4 \n Sneak Attack 4d8 Total \n\n Row 5 = Rows 3 & 4 + 10 = Total Damage',
+  'Row 1 Base D20 roll\n\n Row 2 D20 + 17|17|12 \n\n Row 3 Dagger \n\n Row 4 \n Sneak Attack 5d8 Total \n\n Row 5 = Rows 3 & 4 + 10 = Total Damage',
   'Enjoy!',
   [
-    {text: 'T20 = Total D20 Roll Fighting Defensively', onPress: () => console.log('D20 Roll Total')},
+    {text: 'T20 = Total D20 Roll + Haste + Song', onPress: () => console.log('D20 Roll Total')},
     {text: '888 = Total Damage, Song + Dagger + SA', onPress: () => console.log('Cancel Pressed'), style: 'cancel'}
   ],
   { cancelable: false }
@@ -28,7 +32,7 @@ export default class Laylo4 extends React.Component {
 
     this.state={
 
-      // This is our Display number value, prior to button press
+      // This is the Display number value, prior to button press
       NumberHolderD20S1 : 20,
       NumberHolderD20S2 : 20,
       NumberHolderD20S3 : 20,
@@ -58,17 +62,23 @@ export default class Laylo4 extends React.Component {
     let diceroll8S1b = Math.floor(Math.random()  * 8) +1;
     let diceroll8S1c = Math.floor(Math.random()  * 8) +1;
     let diceroll8S1d = Math.floor(Math.random()  * 8) +1;
-    let D8S1 = diceroll8S1a + diceroll8S1b + diceroll8S1c + diceroll8S1d;
+    let diceroll8S1e = Math.floor(Math.random()  * 8) +1;
+    let D8S1 = diceroll8S1a + diceroll8S1b +
+      diceroll8S1c + diceroll8S1d + diceroll8S1e;
     let diceroll8S2a = Math.floor(Math.random()  * 8) +1;
     let diceroll8S2b = Math.floor(Math.random()  * 8) +1;
     let diceroll8S2c = Math.floor(Math.random()  * 8) +1;
     let diceroll8S2d = Math.floor(Math.random()  * 8) +1;
-    let D8S2 = diceroll8S2a + diceroll8S2b + diceroll8S2c + diceroll8S2d;
+    let diceroll8S2e = Math.floor(Math.random()  * 8) +1;
+    let D8S2 = diceroll8S2a + diceroll8S2b +
+      diceroll8S2c + diceroll8S2d + diceroll8S2e;
     let diceroll8S3a = Math.floor(Math.random()  * 8) +1;
     let diceroll8S3b = Math.floor(Math.random()  * 8) +1;
     let diceroll8S3c = Math.floor(Math.random()  * 8) +1;
     let diceroll8S3d = Math.floor(Math.random()  * 8) +1;
-    let D8S3 = diceroll8S3a + diceroll8S3b + diceroll8S3c + diceroll8S3d;
+    let diceroll8S3e = Math.floor(Math.random()  * 8) +1;
+    let D8S3 = diceroll8S3a + diceroll8S3b +
+      diceroll8S3c + diceroll8S3d + diceroll8S3e;
     let D4S1 = Math.floor(Math.random() * 4) + 1;
     let D4S2 = Math.floor(Math.random() * 4) + 1;
     let D4S3 = Math.floor(Math.random() * 4) + 1;
@@ -212,7 +222,7 @@ const styles = StyleSheet.create({
       padding: 5,
     },
     top: {
-      height: '35%',
+      height: '25%',
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: '#FFD400',
@@ -233,7 +243,7 @@ const styles = StyleSheet.create({
       maxWidth: '65%',
     },
     center: {
-      height: '10%',
+      height: '20%',
       backgroundColor: '#FFD400',
       justifyContent: 'center',
       alignContent: 'center',
@@ -241,21 +251,24 @@ const styles = StyleSheet.create({
 
     },
     bottom: {
-      height: '33%',
+      height: '55%',
       backgroundColor: '#FFD400',
       flexDirection: 'row',
       flexWrap: 'wrap',
       padding: 2,
+      justifyContent: 'center',
+      alignContent: 'center',
+      alignItems: 'center',
     },
     bottomItem: {
-      width: '33%',
-      height: '33%',
-      padding: 5,
+      width: Dimensions.get('window').width / 3 -6,
+      height: 60,
+      padding: 5
     },
     bottomItemTotal: {
-      width: '33%',
-      height: '33%',
-      padding: 5,
+      width: Dimensions.get('window').width / 3 -6,
+      height: 60,
+      padding: 5
     },
     bottomItemInner20: {
       flex: 1,
@@ -265,7 +278,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       textAlign: 'center',
-      fontSize: 60,
+      fontSize: 45,
       fontWeight: '900',
       color: '#d2691e',
     },
@@ -277,7 +290,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       textAlign: 'center',
-      fontSize: 60,
+      fontSize: 45,
       fontWeight: '900',
       color: 'white',
     },
@@ -289,7 +302,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       textAlign: 'center',
-      fontSize: 50,
+      fontSize: 45,
       fontWeight: '900',
       color: '#8a2be2',
     },
@@ -301,7 +314,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       textAlign: 'center',
-      fontSize: 50,
+      fontSize: 45,
       fontWeight: '900',
       color: '#8a2be2',
     },
@@ -313,7 +326,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       textAlign: 'center',
-      fontSize: 50,
+      fontSize: 45,
       fontWeight: '900',
       color: 'papayawhip',
     },
@@ -325,7 +338,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       textAlign: 'center',
-      fontSize: 50,
+      fontSize: 45,
       fontWeight: '900',
       color: 'violet',
     },

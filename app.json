@@ -5,8 +5,8 @@
     "description": "A dice rolling app for Laylo the Blade.",
     "sdkVersion": "25.0.0",
     "version": "1.0.0",
-    "ios": {
-      "bundleIdentifier": "com.davidebinger.dicerollerlaylo"
+    "android": {
+      "package": "com.davidebinger.dicerollerlaylo"
     }
   }
 }
