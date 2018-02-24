@@ -117,9 +117,9 @@ export default class Zahed extends React.Component {
 
   render() {
     const { navigate } = this.props.navigation;
-    const D20S1Style = this.state.NumberHolderD20S2 === 20 | this.state.NumberHolderD20S2 === 19 | this.state.NumberHolderD20S2 === 18 | this.state.NumberHolderD20S2 === 1 ? styles.bottomItemInner20picked : styles.bottomItemInner20;
-    const D20S2Style = this.state.NumberHolderD20S3 === 20 | this.state.NumberHolderD20S3 === 19 | this.state.NumberHolderD20S3 === 18 | this.state.NumberHolderD20S3 === 1 ? styles.bottomItemInner20picked : styles.bottomItemInner20;
-    const D20S3Style = this.state.NumberHolderD20S4 === 20 | this.state.NumberHolderD20S4 === 19 | this.state.NumberHolderD20S4 === 18 | this.state.NumberHolderD20S4 === 1 ? styles.bottomItemInner20picked : styles.bottomItemInner20;
+    const D20S1Style = this.state.NumberHolderD20S2 === 20 | this.state.NumberHolderD20S2 === 19 | this.state.NumberHolderD20S2 === 18 |this.state.NumberHolderD20S2 === 17 | this.state.NumberHolderD20S2 === 16 | this.state.NumberHolderD20S2 === 15 | this.state.NumberHolderD20S2 === 1 ? styles.bottomItemInner20picked : styles.bottomItemInner20;
+    const D20S2Style = this.state.NumberHolderD20S3 === 20 | this.state.NumberHolderD20S3 === 19 | this.state.NumberHolderD20S3 === 18 |this.state.NumberHolderD20S3 === 17 | this.state.NumberHolderD20S3 === 16 | this.state.NumberHolderD20S3 === 15 | this.state.NumberHolderD20S3 === 1 ? styles.bottomItemInner20picked : styles.bottomItemInner20;
+    const D20S3Style = this.state.NumberHolderD20S4 === 20 | this.state.NumberHolderD20S4 === 19 | this.state.NumberHolderD20S4 === 18 |this.state.NumberHolderD20S4 === 17 | this.state.NumberHolderD20S4 === 16 | this.state.NumberHolderD20S4 === 15 | this.state.NumberHolderD20S4 === 1 ? styles.bottomItemInner20picked : styles.bottomItemInner20;
 
     return (
       <ImageBackground source={require('../images/Zahed5.jpg')} style={styles.container}>
